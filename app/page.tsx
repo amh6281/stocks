@@ -1,8 +1,8 @@
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
 
 const Home = () => {
   return (
-    <div className="flex justify-center items-center h-screen">
+    <div className='flex h-screen items-center justify-center'>
       <Button>test</Button>
     </div>
   );
