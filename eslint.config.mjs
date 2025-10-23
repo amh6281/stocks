@@ -19,6 +19,8 @@ const eslintConfig = [
       'tailwindcss/classnames-order': 'off', // 클래스 순서 검사 비활성화
       'prefer-arrow-callback': 'off', // 화살표 함수 강제 비활성화
       'prefer-template': 'off', // 템플릿 리터럴 강제 비활성화
+      'react/function-component-definition': 'off', // 함수 컴포넌트 정의 방식 자유화
+      'react/jsx-no-useless-fragment': 'off', // 불필요한 Fragment 경고 비활성화
     },
   }),
 ];
