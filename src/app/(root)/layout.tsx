@@ -1,10 +1,12 @@
+import Header from '@/components/Header'
+
 interface LayoutProps {
     children: React.ReactNode
 }
 
 const Layout = ({ children }: LayoutProps) => (
     <main className='min-h-screen text-gray-400'>
-        {/* Header */}
+        <Header />
         <div className='container py-10'>{children}</div>
     </main>
 )
