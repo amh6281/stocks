@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import NavItems from './NavItems'
-import UserDropdown from './UserDropdown'
+import { NavItems, UserDropdown } from '.'
 
 const Header = () => {
     return (
