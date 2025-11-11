@@ -1,6 +1,7 @@
 'use client'
-import InputField from '@/components/forms/InputField'
+import { SelectField, InputField } from '@/components/forms'
 import { Button } from '@/components/ui/button'
+import { INVESTMENT_GOALS, PREFERRED_INDUSTRIES, RISK_TOLERANCE_OPTIONS } from '@/constants/widget'
 import { useForm } from 'react-hook-form'
 
 const SignUp = () => {
@@ -67,6 +68,37 @@ const SignUp = () => {
                     error={errors.password}
                     validation={{ required: '비밀번호는 필수 입력 사항입니다.', minLength: 8 }}
                 />
+
+                <SelectField
+                    name='investmentGoals'
+                    label='투자 목표'
+                    placeholder='투자 목표를 선택해주세요.'
+                    options={INVESTMENT_GOALS}
+                    control={control}
+                    error={errors.investmentGoals}
+                    required
+                />
+
+                <SelectField
+                    name='riskTolerance'
+                    label='위험 감수 성향'
+                    placeholder='위험 감수 성향을 선택해주세요.'
+                    options={RISK_TOLERANCE_OPTIONS}
+                    control={control}
+                    error={errors.riskTolerance}
+                    required
+                />
+
+                <SelectField
+                    name='preferredIndustry'
+                    label='선호 산업'
+                    placeholder='선호 산업을 선택해주세요.'
+                    options={PREFERRED_INDUSTRIES}
+                    control={control}
+                    error={errors.preferredIndustry}
+                    required
+                />
+
                 <Button type='submit' disabled={isSubmitting} className='yellow-btn mt-5 w-full'>
                     {isSubmitting ? '계정 생성 중...' : '투자 시작하기'}
                 </Button>

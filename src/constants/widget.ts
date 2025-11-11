@@ -1,33 +1,37 @@
 // 투자 목표 선택 옵션
 export const INVESTMENT_GOALS = [
-    { value: 'Growth', label: 'Growth' },
-    { value: 'Income', label: 'Income' },
-    { value: 'Balanced', label: 'Balanced' },
-    { value: 'Conservative', label: 'Conservative' },
+    { value: 'Growth', label: '고수익 추구형' },
+    { value: 'Income', label: '안정적 수익형' },
+    { value: 'Balanced', label: '위험·수익 균형형' },
+    { value: 'Conservative', label: '안정 추구형' },
 ]
 
+// 위험 감수 성향 (Risk Tolerance)
 export const RISK_TOLERANCE_OPTIONS = [
-    { value: 'Low', label: 'Low' },
-    { value: 'Medium', label: 'Medium' },
-    { value: 'High', label: 'High' },
+    { value: 'Low', label: '낮음' },
+    { value: 'Medium', label: '보통' },
+    { value: 'High', label: '높음' },
 ]
 
+// 선호 산업 (Preferred Industries)
 export const PREFERRED_INDUSTRIES = [
-    { value: 'Technology', label: 'Technology' },
-    { value: 'Healthcare', label: 'Healthcare' },
-    { value: 'Finance', label: 'Finance' },
-    { value: 'Energy', label: 'Energy' },
-    { value: 'Consumer Goods', label: 'Consumer Goods' },
+    { value: 'Technology', label: '기술' },
+    { value: 'Healthcare', label: '헬스케어' },
+    { value: 'Finance', label: '금융' },
+    { value: 'Energy', label: '에너지' },
+    { value: 'Consumer Goods', label: '소비재' },
 ]
 
+// 알림 유형 (Alert Type)
 export const ALERT_TYPE_OPTIONS = [
-    { value: 'upper', label: 'Upper' },
-    { value: 'lower', label: 'Lower' },
+    { value: 'upper', label: '상한가 알림' },
+    { value: 'lower', label: '하한가 알림' },
 ]
 
+// 조건 (Condition)
 export const CONDITION_OPTIONS = [
-    { value: 'greater', label: 'Greater than (>)' },
-    { value: 'less', label: 'Less than (<)' },
+    { value: 'greater', label: '초과 (>)' },
+    { value: 'less', label: '미만 (<)' },
 ]
 
 // TradingView Charts
