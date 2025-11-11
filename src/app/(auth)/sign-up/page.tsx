@@ -1,5 +1,6 @@
 'use client'
-import { SelectField, InputField } from '@/components/forms'
+
+import { SelectField, InputField, FooterLink } from '@/components/forms'
 import { Button } from '@/components/ui/button'
 import { INVESTMENT_GOALS, PREFERRED_INDUSTRIES, RISK_TOLERANCE_OPTIONS } from '@/constants/widget'
 import { useForm } from 'react-hook-form'
@@ -36,7 +37,6 @@ const SignUp = () => {
             <h1 className='form-title'>회원가입</h1>
 
             <form onSubmit={handleSubmit(onSubmit)} className='space-y-5'>
-                {/* Inputs */}
                 <InputField
                     name='fullName'
                     label='이름'
@@ -45,7 +45,6 @@ const SignUp = () => {
                     error={errors.fullName}
                     validation={{ required: '이름은 필수 입력 사항입니다.', minLength: 2 }}
                 />
-
                 <InputField
                     name='email'
                     label='이메일'
@@ -58,7 +57,6 @@ const SignUp = () => {
                         message: '올바른 이메일 형식이 아닙니다.',
                     }}
                 />
-
                 <InputField
                     name='password'
                     label='비밀번호'
@@ -78,7 +76,6 @@ const SignUp = () => {
                     error={errors.investmentGoals}
                     required
                 />
-
                 <SelectField
                     name='riskTolerance'
                     label='위험 감수 성향'
@@ -88,7 +85,6 @@ const SignUp = () => {
                     error={errors.riskTolerance}
                     required
                 />
-
                 <SelectField
                     name='preferredIndustry'
                     label='선호 산업'
@@ -98,10 +94,10 @@ const SignUp = () => {
                     error={errors.preferredIndustry}
                     required
                 />
-
                 <Button type='submit' disabled={isSubmitting} className='yellow-btn mt-5 w-full'>
                     {isSubmitting ? '계정 생성 중...' : '투자 시작하기'}
                 </Button>
+                <FooterLink text='이미 계정이 있으신가요?' linkText='로그인' href='/sign-in' />
             </form>
         </>
     )
