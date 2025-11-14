@@ -94,9 +94,11 @@ const SignUp = () => {
                     error={errors.preferredIndustry}
                     required
                 />
+
                 <Button type='submit' disabled={isSubmitting} className='yellow-btn mt-5 w-full'>
                     {isSubmitting ? '계정 생성 중...' : '투자 시작하기'}
                 </Button>
+
                 <FooterLink text='이미 계정이 있으신가요?' linkText='로그인' href='/sign-in' />
             </form>
         </>
