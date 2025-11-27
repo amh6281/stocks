@@ -1,3 +1,4 @@
+import { sendWelcomeEmail } from '../nodemailer'
 import { inngest } from './client'
 import { PERSONALIZED_WELCOME_EMAIL_PROMPT } from './prompts'
 
@@ -31,7 +32,10 @@ export const sendSignUpEmail = inngest.createFunction(
                 (part && 'text' in part ? part.text : null) ||
                 '가입을 축하드립니다. 지금부터 투자에 더 나은 결정을 내릴 수 있도록 도와드리겠습니다.'
 
-            // email 로직
+            const {
+                data: { email, name },
+            } = event
+            return await sendWelcomeEmail({ email, name, intro: introText })
         })
 
         return {
