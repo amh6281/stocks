@@ -3,9 +3,14 @@
 import { SelectField, InputField, FooterLink } from '@/components/forms'
 import { Button } from '@/components/ui/button'
 import { INVESTMENT_GOALS, PREFERRED_INDUSTRIES, RISK_TOLERANCE_OPTIONS } from '@/constants/widget'
+import { signUpWithEmail } from '@/lib/actions/auth.action'
+import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
+import { toast } from 'sonner'
 
 const SignUp = () => {
+    const router = useRouter()
+
     const {
         register,
         handleSubmit,
@@ -26,9 +31,13 @@ const SignUp = () => {
 
     const onSubmit = async (data: SignUpFormData) => {
         try {
-            console.log(data)
+            const result = await signUpWithEmail(data)
+            if (result.success) router.push('/')
         } catch (err) {
-            console.error(err)
+            console.log(err)
+            toast.error('회원가입 실패', {
+                description: err instanceof Error ? err.message : '회원가입 실패',
+            })
         }
     }
 
