@@ -9,6 +9,7 @@ import {
 const Home = () => {
     const scriptUrl = `https://s3.tradingview.com/external-embedding/embed-widget-`
     console.log('code review test')
+    console.log('gemini code assist test')
     return (
         <div className='home-wrapper flex min-h-screen'>
             <section className='home-section grid w-full gap-8'>
